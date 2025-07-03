@@ -6,6 +6,10 @@ const Car = db.define("Car", {
         type: DataTypes.STRING,
         allowNull: false
     },
+    model:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     year: {
         type: DataTypes.INTEGER,
         allowNull: false
