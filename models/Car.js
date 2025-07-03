@@ -1,0 +1,19 @@
+const {DataTypes} = require("sequelize")
+const db = require("../db/conn")
+
+const Car = db.define("Car", {
+    brand:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    year: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    used:{
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+    }
+})
+
+module.exports = Car
