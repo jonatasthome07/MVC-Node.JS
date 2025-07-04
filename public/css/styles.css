@@ -4,3 +4,33 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+header{
+    background-color: gray;
+    padding: 2px;
+}
+
+#navbar{
+    margin: 20px 5px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+li{
+    list-style: none;
+}
+
+li > a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    transition: 1s;
+}
+
+li > a:hover{
+    color: white;
+}
