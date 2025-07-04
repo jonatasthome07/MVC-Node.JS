@@ -13,7 +13,7 @@ const Car = db.define("Car", {
     year: {
         type: DataTypes.INTEGER,
         allowNull: false
-    },
+    }
 })
 
 module.exports = Car

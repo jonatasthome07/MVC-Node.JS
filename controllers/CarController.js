@@ -2,7 +2,8 @@ const Car = require("../models/Car")
 
 module.exports = class CarControler {
     static async showCars (req,res){
-        res.render("cars/home")
+        const cars = await Car.findAll({raw:true})
+        res.render("cars/home", {cars})
     }
 
     static async formCar (req,res){

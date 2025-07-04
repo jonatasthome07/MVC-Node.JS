@@ -1,1 +1,6 @@
-<h1>Teste</h1>
+<h1>Nossos carros disponíveis</h1>
+{{#each cars}}
+<h2>{{this.model}}</h2>
+<p>Marca: {{this.brand}}</p>
+<p>Ano: {{this.year}}</p>
+{{/each}}
