@@ -37,4 +37,10 @@ module.exports = class CarControler {
         await Car.update(car,{where:{id:id}})
         res.redirect("/cars")
     }
+
+    static async deleteCar (req,res){
+        const id = req.body.id
+        await Car.destroy({where:{id:id}})
+        res.redirect("/cars")
+    }
 }

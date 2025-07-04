@@ -7,5 +7,6 @@ Router.get("/add", CarController.formCar)
 Router.post("/add", CarController.addCar)
 Router.get("/edit/:id", CarController.editCar)
 Router.post("/edit/:id", CarController.saveEdit)
+Router.post("/delete", CarController.deleteCar)
 
 module.exports = Router
