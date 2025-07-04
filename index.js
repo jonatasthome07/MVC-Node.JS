@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:true}))
 app.use("/cars", carRoutes)
 
 //Conexão
-conn.sync({force:true})
+conn.sync()
 .then(()=>{
     app.listen(process.env.PORT || 3000)
 })
