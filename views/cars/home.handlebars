@@ -1,7 +1,11 @@
 <h1>Nossos carros disponíveis</h1>
-{{#each cars}}
-<h2>{{this.model}}</h2>
-<p>Marca: {{this.brand}}</p>
-<p>Ano: {{this.year}}</p>
-<a href="/cars/edit/{{this.id}}">Editar dados</a>
-{{/each}}
+<div id="all-cars">
+    {{#each cars}}
+        <div class="car-description">
+            <h2>{{this.model}}</h2>
+            <p>Marca: {{this.brand}}</p>
+            <p>Ano: {{this.year}}</p>
+            <a href="/cars/edit/{{this.id}}">Editar dados</a>
+        </div>
+    {{/each}}
+</div>
