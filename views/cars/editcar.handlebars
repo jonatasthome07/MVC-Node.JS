@@ -1,0 +1,9 @@
+<div class="form-container">
+    <form action="/cars/edit/{{car.id}}" method="post">
+        <input type="hidden" name="id" value="{{car.id}}">
+        <input type="text" name="brand" value="{{car.brand}}">
+        <input type="text" name="model" value="{{car.model}}">
+        <input type="number" name="year" value="{{car.year}}">
+        <input type="submit" value="Salvar">
+    </form>
+</div>

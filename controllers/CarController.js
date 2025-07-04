@@ -20,4 +20,21 @@ module.exports = class CarControler {
         await Car.create(car)
         res.redirect("/cars")
     }
+
+    static async editCar (req,res){
+        const id = req.params.id
+        const car = await Car.findOne({raw:true, where:{id:id}})
+        res.render("cars/editcar", {car})
+    }
+
+    static async saveEdit (req,res){
+        const id = req.body.id
+        const brand = req.body.brand
+        const model = req.body.model
+        const year = req.body.year
+
+        const car = {brand,model,year}
+        await Car.update(car,{where:{id:id}})
+        res.redirect("/cars")
+    }
 }

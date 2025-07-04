@@ -5,5 +5,7 @@ const Router = express.Router()
 Router.get("/", CarController.showCars)
 Router.get("/add", CarController.formCar)
 Router.post("/add", CarController.addCar)
+Router.get("/edit/:id", CarController.editCar)
+Router.post("/edit/:id", CarController.saveEdit)
 
 module.exports = Router
