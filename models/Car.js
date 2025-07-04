@@ -14,10 +14,6 @@ const Car = db.define("Car", {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    used:{
-        type: DataTypes.BOOLEAN,
-        allowNull: false
-    }
 })
 
 module.exports = Car
